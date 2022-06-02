@@ -1,0 +1,39 @@
+@import 'mixins';
+
+.btn-rounded{
+    @include media-breakpoint-down(sm) {
+        display: none;//este mixin BS lo trae x default (down es a reducido)
+    }
+    position: relative;
+    padding: 0.9375rem 4.357rem 0.9375rem  1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+
+    &:hover{
+        @include gradient;
+        color: $white;
+
+        span{
+            background-color: rgba($black , .6);
+        }
+    }
+
+    span{
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+
+        i{
+            color: $white;
+            font-size: 1rem;
+            line-height: 2.5rem;
+        }
+    }
+}
