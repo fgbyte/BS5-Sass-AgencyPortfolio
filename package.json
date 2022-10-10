@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"sass --watch scss:dist/css"
+    "compile:sass":"sass --watch scss:dist/css",
+    "purge": "purgecss --css dist/css/main.css --content dist/index.html -o dist/css/main.min.css"
   },
   "keywords": [],
   "author": "",
